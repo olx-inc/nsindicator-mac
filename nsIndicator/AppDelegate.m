@@ -18,7 +18,7 @@
     */
     
     // Fetch remote plist config file and load into Dictionary
-    NSURL *externalFile = [NSURL URLWithString:@"https://raw.githubusercontent.com/juansanzone/ns_indicator_files/master/environments.plist"];
+    NSURL *externalFile = [NSURL URLWithString:@"https://raw.githubusercontent.com/juansanzone/nsindicator-mac/master/config/environments.plist"];
     NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:externalFile];
     
     // Build Menu from Dictionary
