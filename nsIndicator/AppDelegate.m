@@ -35,7 +35,7 @@
         [self.statusMenu addItem: currentItem];
     }];
     
-    NSMenuItem *exitItem = [[NSMenuItem alloc] initWithTitle:@"-- EXIT --" action:@selector(exitApp:) keyEquivalent:@""];
+    NSMenuItem *exitItem = [[NSMenuItem alloc] initWithTitle:@"EXIT" action:@selector(exitApp:) keyEquivalent:@""];
     [exitItem setToolTip:@"Exit app"];
     [exitItem setEnabled:YES];
     [self.statusMenu addItem: exitItem];
