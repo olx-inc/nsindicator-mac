@@ -18,17 +18,6 @@
 		8399013E19F1446D00589E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8399011D19F1446C00589E01 /* Cocoa.framework */; };
 		8399014619F1446D00589E01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8399014419F1446D00589E01 /* InfoPlist.strings */; };
 		8399014819F1446D00589E01 /* nsIndicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399014719F1446D00589E01 /* nsIndicatorTests.m */; };
-		83DF826919F1FD2500DAEFD9 /* corp.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF825F19F1FD2500DAEFD9 /* corp.png */; };
-		83DF826A19F1FD2500DAEFD9 /* dev.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826019F1FD2500DAEFD9 /* dev.png */; };
-		83DF826B19F1FD2500DAEFD9 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826119F1FD2500DAEFD9 /* google.png */; };
-		83DF826C19F1FD2500DAEFD9 /* local.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826219F1FD2500DAEFD9 /* local.png */; };
-		83DF826D19F1FD2500DAEFD9 /* qa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826319F1FD2500DAEFD9 /* qa1.png */; };
-		83DF826E19F1FD2500DAEFD9 /* staging-akamai.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826419F1FD2500DAEFD9 /* staging-akamai.png */; };
-		83DF826F19F1FD2500DAEFD9 /* staging.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826519F1FD2500DAEFD9 /* staging.png */; };
-		83DF827019F1FD2500DAEFD9 /* testing-akamai.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826619F1FD2500DAEFD9 /* testing-akamai.png */; };
-		83DF827119F1FD2500DAEFD9 /* testing.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826719F1FD2500DAEFD9 /* testing.png */; };
-		83DF827219F1FD2500DAEFD9 /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 83DF826819F1FD2500DAEFD9 /* unknown.png */; };
-		83DF827519F1FD4800DAEFD9 /* environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83DF827419F1FD4800DAEFD9 /* environments.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,17 +50,6 @@
 		8399014319F1446D00589E01 /* nsIndicatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nsIndicatorTests-Info.plist"; sourceTree = "<group>"; };
 		8399014519F1446D00589E01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8399014719F1446D00589E01 /* nsIndicatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nsIndicatorTests.m; sourceTree = "<group>"; };
-		83DF825F19F1FD2500DAEFD9 /* corp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corp.png; sourceTree = "<group>"; };
-		83DF826019F1FD2500DAEFD9 /* dev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dev.png; sourceTree = "<group>"; };
-		83DF826119F1FD2500DAEFD9 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
-		83DF826219F1FD2500DAEFD9 /* local.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = local.png; sourceTree = "<group>"; };
-		83DF826319F1FD2500DAEFD9 /* qa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qa1.png; sourceTree = "<group>"; };
-		83DF826419F1FD2500DAEFD9 /* staging-akamai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "staging-akamai.png"; sourceTree = "<group>"; };
-		83DF826519F1FD2500DAEFD9 /* staging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staging.png; sourceTree = "<group>"; };
-		83DF826619F1FD2500DAEFD9 /* testing-akamai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "testing-akamai.png"; sourceTree = "<group>"; };
-		83DF826719F1FD2500DAEFD9 /* testing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testing.png; sourceTree = "<group>"; };
-		83DF826819F1FD2500DAEFD9 /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
-		83DF827419F1FD4800DAEFD9 /* environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = environments.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +115,6 @@
 		8399012319F1446C00589E01 /* nsIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				83DF827319F1FD3A00DAEFD9 /* config */,
-				83DF825E19F1FCFB00DAEFD9 /* images */,
 				8399012F19F1446C00589E01 /* AppDelegate.h */,
 				8399013019F1446C00589E01 /* AppDelegate.m */,
 				8399013219F1446C00589E01 /* MainMenu.xib */,
@@ -176,31 +152,6 @@
 				8399014419F1446D00589E01 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		83DF825E19F1FCFB00DAEFD9 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				83DF825F19F1FD2500DAEFD9 /* corp.png */,
-				83DF826019F1FD2500DAEFD9 /* dev.png */,
-				83DF826119F1FD2500DAEFD9 /* google.png */,
-				83DF826219F1FD2500DAEFD9 /* local.png */,
-				83DF826319F1FD2500DAEFD9 /* qa1.png */,
-				83DF826419F1FD2500DAEFD9 /* staging-akamai.png */,
-				83DF826519F1FD2500DAEFD9 /* staging.png */,
-				83DF826619F1FD2500DAEFD9 /* testing-akamai.png */,
-				83DF826719F1FD2500DAEFD9 /* testing.png */,
-				83DF826819F1FD2500DAEFD9 /* unknown.png */,
-			);
-			name = images;
-			sourceTree = "<group>";
-		};
-		83DF827319F1FD3A00DAEFD9 /* config */ = {
-			isa = PBXGroup;
-			children = (
-				83DF827419F1FD4800DAEFD9 /* environments.plist */,
-			);
-			name = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,20 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8399012819F1446C00589E01 /* InfoPlist.strings in Resources */,
-				83DF827119F1FD2500DAEFD9 /* testing.png in Resources */,
-				83DF826919F1FD2500DAEFD9 /* corp.png in Resources */,
 				8399013619F1446C00589E01 /* Images.xcassets in Resources */,
-				83DF826D19F1FD2500DAEFD9 /* qa1.png in Resources */,
-				83DF827019F1FD2500DAEFD9 /* testing-akamai.png in Resources */,
-				83DF826A19F1FD2500DAEFD9 /* dev.png in Resources */,
 				8399012E19F1446C00589E01 /* Credits.rtf in Resources */,
-				83DF827219F1FD2500DAEFD9 /* unknown.png in Resources */,
-				83DF827519F1FD4800DAEFD9 /* environments.plist in Resources */,
-				83DF826B19F1FD2500DAEFD9 /* google.png in Resources */,
-				83DF826F19F1FD2500DAEFD9 /* staging.png in Resources */,
-				83DF826E19F1FD2500DAEFD9 /* staging-akamai.png in Resources */,
 				8399013419F1446C00589E01 /* MainMenu.xib in Resources */,
-				83DF826C19F1FD2500DAEFD9 /* local.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
