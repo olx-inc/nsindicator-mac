@@ -16,11 +16,6 @@
         NSString *configFile = [[NSBundle mainBundle] pathForResource:@"environments" ofType:@"plist"];
     */
     
-    // Get remote plist config file and load into Dictionary
-    NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
-    NSURL *configFile = [NSURL URLWithString: configUrl];
-    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
-    
     // Load status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
@@ -28,13 +23,22 @@
     NSString *itemImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/unknown.png"];
     NSImage *itemImage = [[NSImage alloc] initWithContentsOfFile:itemImagePath];
     
-    // Customize default item
+    // Customize default status bar item
     [self.statusItem setMenu:self.statusMenu];
     [self.statusItem setTitle:@"nsIndicator"];
     [self.statusItem setImage:itemImage];
     [self.statusItem setHighlightMode:YES];
     
-    // Build menu from environments
+    // Build google DNS item
+    [self buildGoogleItem];
+    [self.statusMenu addItem:[NSMenuItem separatorItem]];
+    
+    // Get remote plist config file with environments and load into Dictionary
+    NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
+    NSURL *configFile = [NSURL URLWithString: configUrl];
+    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
+    
+    // Build menu with environments
     [environments enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop)
     {
         NSString *imageStr = [NSString stringWithFormat: @"%@%@%@", @"/", [key lowercaseString], @".png"];
@@ -83,6 +87,17 @@
     
     [self.statusItem setTitle:menuItem.title];
     [self.statusItem setImage:itemImage];
+}
+
+- (void)buildGoogleItem
+{
+    NSString *googleImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/google.png"];
+    NSImage *googleImage = [[NSImage alloc] initWithContentsOfFile:googleImagePath];
+    NSMenuItem *googleItem = [[NSMenuItem alloc] initWithTitle:@"Google" action:@selector(updateDns:) keyEquivalent:@""];
+    [googleItem setToolTip:@"8.8.8.8"];
+    [googleItem setImage:googleImage];
+    [googleItem setEnabled:YES];
+    [self.statusMenu addItem: googleItem];
 }
 
 - (IBAction)exitApp:(NSMenuItem *)menuItem
