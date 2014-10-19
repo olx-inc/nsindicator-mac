@@ -4,8 +4,6 @@
 <dict>
 	<key>Corp</key>
 	<string>127.0.0.1</string>
-	<key>Google</key>
-	<string>8.8.8.8</string>
 	<key>Staging</key>
 	<string>127.0.0.1</string>
 	<key>Staging-Akamai</key>
