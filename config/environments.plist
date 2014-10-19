@@ -8,11 +8,11 @@
 	<string>8.8.8.8</string>
 	<key>Staging</key>
 	<string>127.0.0.1</string>
-	<key>Staging-Aka</key>
+	<key>Staging-Akamai</key>
 	<string>127.0.0.1</string>
 	<key>Testing</key>
 	<string>127.0.0.1</string>
-	<key>Testing-Aka</key>
+	<key>Testing-Akamai</key>
 	<string>127.0.0.1</string>
 	<key>Dev</key>
 	<string>127.0.0.1</string>
