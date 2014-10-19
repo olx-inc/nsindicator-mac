@@ -13,43 +13,57 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     /*
-    NSString *configFile = [[NSBundle mainBundle] pathForResource:
-                            @"environments" ofType:@"plist"];
+        NSString *configFile = [[NSBundle mainBundle] pathForResource:@"environments" ofType:@"plist"];
     */
     
-    // Fetch remote plist config file and load into Dictionary
-    NSURL *externalFile = [NSURL URLWithString:@"https://raw.githubusercontent.com/juansanzone/nsindicator-mac/master/config/environments.plist"];
-    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:externalFile];
+    // Get remote plist config file and load into Dictionary
+    NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
+    NSURL *configFile = [NSURL URLWithString: configUrl];
+    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
     
-    // Build Menu from Dictionary
+    // Load status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
+    // Add default image icon
+    NSString *itemImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/unknown.png"];
+    NSImage *itemImage = [[NSImage alloc] initWithContentsOfFile:itemImagePath];
+    
+    // Customize default item
     [self.statusItem setMenu:self.statusMenu];
     [self.statusItem setTitle:@"nsIndicator"];
+    [self.statusItem setImage:itemImage];
     [self.statusItem setHighlightMode:YES];
     
+    // Build menu from environments
     [environments enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop)
     {
+        NSString *imageStr = [NSString stringWithFormat: @"%@%@%@", @"/", [key lowercaseString], @".png"];
+        NSString *itemImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:imageStr];
+        NSImage *itemImage = [[NSImage alloc] initWithContentsOfFile:itemImagePath];
+        
         NSMenuItem *currentItem = [[NSMenuItem alloc] initWithTitle:key action:@selector(updateDns:) keyEquivalent:@""];
         [currentItem setToolTip:value];
+        [currentItem setImage:itemImage];
         [currentItem setEnabled:YES];
+        
         [self.statusMenu addItem: currentItem];
     }];
     
-    NSMenuItem *exitItem = [[NSMenuItem alloc] initWithTitle:@"EXIT" action:@selector(exitApp:) keyEquivalent:@""];
-    [exitItem setToolTip:@"Exit app"];
+    // Build Exit item
+    [self.statusMenu addItem:[NSMenuItem separatorItem]];
+    NSMenuItem *exitItem = [[NSMenuItem alloc] initWithTitle:@"Exit" action:@selector(exitApp:) keyEquivalent:@""];
+    [exitItem setToolTip:@"Click to Close this App"];
     [exitItem setEnabled:YES];
     [self.statusMenu addItem: exitItem];
 }
 
 - (IBAction)updateDns:(NSMenuItem *)menuItem
 {
-    // Build terminal command
+    // Create terminal command to change DNS
     NSString* terminalCmd = @"networksetup -setdnsservers Wi-Fi ";
     terminalCmd = [terminalCmd stringByAppendingString:menuItem.toolTip];
     
-    NSLog(@"Command: %@", terminalCmd);
-    
-    // Execute command
+    // Exec bash command
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = @"/bin/bash/";
     NSArray* aditionalParameters = [NSArray arrayWithObjects:@"-c", terminalCmd, nil];
@@ -57,8 +71,18 @@
     [task launch];
     [task waitUntilExit];
     
-    // Update status on bar
+    // Update status menu bar
+    [self updateStatusBar:menuItem];
+}
+
+- (void)updateStatusBar:(NSMenuItem *)menuItem
+{
+    NSString *imageStr = [NSString stringWithFormat: @"%@%@%@", @"/", [menuItem.title lowercaseString], @".png"];
+    NSString *itemImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:imageStr];
+    NSImage *itemImage = [[NSImage alloc] initWithContentsOfFile:itemImagePath];
+    
     [self.statusItem setTitle:menuItem.title];
+    [self.statusItem setImage:itemImage];
 }
 
 - (IBAction)exitApp:(NSMenuItem *)menuItem

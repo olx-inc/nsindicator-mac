@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8348647219F3441300C03AEE /* corp.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646819F3441300C03AEE /* corp.png */; };
+		8348647319F3441300C03AEE /* dev.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646919F3441300C03AEE /* dev.png */; };
+		8348647419F3441300C03AEE /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646A19F3441300C03AEE /* google.png */; };
+		8348647519F3441300C03AEE /* local.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646B19F3441300C03AEE /* local.png */; };
+		8348647619F3441300C03AEE /* qa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646C19F3441300C03AEE /* qa1.png */; };
+		8348647719F3441300C03AEE /* staging-akamai.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646D19F3441300C03AEE /* staging-akamai.png */; };
+		8348647819F3441300C03AEE /* staging.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646E19F3441300C03AEE /* staging.png */; };
+		8348647919F3441300C03AEE /* testing-akamai.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646F19F3441300C03AEE /* testing-akamai.png */; };
+		8348647A19F3441300C03AEE /* testing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348647019F3441300C03AEE /* testing.png */; };
+		8348647B19F3441300C03AEE /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348647119F3441300C03AEE /* unknown.png */; };
 		8399011E19F1446C00589E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8399011D19F1446C00589E01 /* Cocoa.framework */; };
 		8399012819F1446C00589E01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8399012619F1446C00589E01 /* InfoPlist.strings */; };
 		8399012A19F1446C00589E01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399012919F1446C00589E01 /* main.m */; };
@@ -31,6 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8348646819F3441300C03AEE /* corp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = corp.png; path = images/corp.png; sourceTree = SOURCE_ROOT; };
+		8348646919F3441300C03AEE /* dev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dev.png; path = images/dev.png; sourceTree = SOURCE_ROOT; };
+		8348646A19F3441300C03AEE /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = google.png; path = images/google.png; sourceTree = SOURCE_ROOT; };
+		8348646B19F3441300C03AEE /* local.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = local.png; path = images/local.png; sourceTree = SOURCE_ROOT; };
+		8348646C19F3441300C03AEE /* qa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qa1.png; path = images/qa1.png; sourceTree = SOURCE_ROOT; };
+		8348646D19F3441300C03AEE /* staging-akamai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "staging-akamai.png"; path = "images/staging-akamai.png"; sourceTree = SOURCE_ROOT; };
+		8348646E19F3441300C03AEE /* staging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = staging.png; path = images/staging.png; sourceTree = SOURCE_ROOT; };
+		8348646F19F3441300C03AEE /* testing-akamai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testing-akamai.png"; path = "images/testing-akamai.png"; sourceTree = SOURCE_ROOT; };
+		8348647019F3441300C03AEE /* testing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testing.png; path = images/testing.png; sourceTree = SOURCE_ROOT; };
+		8348647119F3441300C03AEE /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unknown.png; path = images/unknown.png; sourceTree = SOURCE_ROOT; };
 		8399011A19F1446C00589E01 /* nsIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nsIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8399011D19F1446C00589E01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8399012019F1446C00589E01 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -73,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8348646719F343E200C03AEE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8348646819F3441300C03AEE /* corp.png */,
+				8348646919F3441300C03AEE /* dev.png */,
+				8348646A19F3441300C03AEE /* google.png */,
+				8348646B19F3441300C03AEE /* local.png */,
+				8348646C19F3441300C03AEE /* qa1.png */,
+				8348646D19F3441300C03AEE /* staging-akamai.png */,
+				8348646E19F3441300C03AEE /* staging.png */,
+				8348646F19F3441300C03AEE /* testing-akamai.png */,
+				8348647019F3441300C03AEE /* testing.png */,
+				8348647119F3441300C03AEE /* unknown.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		8399011119F1446C00589E01 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +152,7 @@
 		8399012319F1446C00589E01 /* nsIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				8348646719F343E200C03AEE /* images */,
 				8399012F19F1446C00589E01 /* AppDelegate.h */,
 				8399013019F1446C00589E01 /* AppDelegate.m */,
 				8399013219F1446C00589E01 /* MainMenu.xib */,
@@ -231,9 +269,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8399012819F1446C00589E01 /* InfoPlist.strings in Resources */,
+				8348647A19F3441300C03AEE /* testing.png in Resources */,
+				8348647219F3441300C03AEE /* corp.png in Resources */,
 				8399013619F1446C00589E01 /* Images.xcassets in Resources */,
+				8348647619F3441300C03AEE /* qa1.png in Resources */,
+				8348647919F3441300C03AEE /* testing-akamai.png in Resources */,
+				8348647319F3441300C03AEE /* dev.png in Resources */,
 				8399012E19F1446C00589E01 /* Credits.rtf in Resources */,
+				8348647B19F3441300C03AEE /* unknown.png in Resources */,
+				8348647419F3441300C03AEE /* google.png in Resources */,
+				8348647819F3441300C03AEE /* staging.png in Resources */,
+				8348647719F3441300C03AEE /* staging-akamai.png in Resources */,
 				8399013419F1446C00589E01 /* MainMenu.xib in Resources */,
+				8348647519F3441300C03AEE /* local.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
