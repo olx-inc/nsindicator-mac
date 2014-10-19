@@ -6,7 +6,7 @@ Show a tray icon to change OLX nameservers
 How to Install ?
 ===============
 
-- Download the .zip file named 'nsIndicator.zip' located into the /bin folder
+- Download the .zip file named 'nsIndicator.zip' located into the /bin folder of this repository
 - Extract nsIndicator.app file and execute it! =)
 
 Requirements
