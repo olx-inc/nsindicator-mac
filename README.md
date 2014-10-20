@@ -1,4 +1,4 @@
-nsIndicator for Mac
+nsIndicator for Mac | Beta
 ===============
 
 Show a tray icon to change OLX nameservers
