@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Corp</key>
-	<string>127.0.0.1</string>
+	<string>10.4.1.21</string>
 	<key>Staging</key>
-	<string>127.0.0.1</string>
+	<string>192.168.16.50</string>
 	<key>Staging-Akamai</key>
-	<string>127.0.0.1</string>
+	<string>162.242.197.50</string>
 	<key>Testing</key>
-	<string>127.0.0.1</string>
+	<string>192.168.8.70</string>
 	<key>Testing-Akamai</key>
-	<string>127.0.0.1</string>
+	<string>166.78.73.50</string>
 	<key>Dev</key>
-	<string>127.0.0.1</string>
+	<string>166.78.73.42</string>
 	<key>Local</key>
-	<string>127.0.0.1</string>
+	<string>166.78.73.43</string>
 </dict>
 </plist>
