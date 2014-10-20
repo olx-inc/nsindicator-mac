@@ -19,6 +19,11 @@
     // Load status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
+    // Get remote plist config file with environments and load into Dictionary
+    NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
+    NSURL *configFile = [NSURL URLWithString: configUrl];
+    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
+    
     // Add default image icon
     NSString *itemImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/unknown.png"];
     NSImage *itemImage = [[NSImage alloc] initWithContentsOfFile:itemImagePath];
@@ -32,11 +37,6 @@
     // Build google DNS item
     [self buildGoogleItem];
     [self.statusMenu addItem:[NSMenuItem separatorItem]];
-    
-    // Get remote plist config file with environments and load into Dictionary
-    NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
-    NSURL *configFile = [NSURL URLWithString: configUrl];
-    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
     
     // Build menu with environments
     [environments enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop)
