@@ -12,17 +12,19 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    /*
-        NSString *configFile = [[NSBundle mainBundle] pathForResource:@"environments" ofType:@"plist"];
-    */
+    // Read config file and populate into Dictionary
+    NSString *configFile = [[NSBundle mainBundle] pathForResource:@"environments" ofType:@"plist"];
+    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfFile:configFile];
     
     // Load status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
-    // Get remote plist config file with environments and load into Dictionary
-    NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
-    NSURL *configFile = [NSURL URLWithString: configUrl];
-    NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
+    /*
+        // Old implementation | Load remote config file
+        NSString *configUrl = @"https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/config/environments.plist";
+        NSURL *configFile = [NSURL URLWithString: configUrl];
+        NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfURL:configFile];
+    */
     
     // Add default image icon
     NSString *itemImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/unknown.png"];

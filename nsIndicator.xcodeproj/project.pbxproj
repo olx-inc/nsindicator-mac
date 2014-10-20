@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83327E5A19F5895800E9786E /* environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83327E5919F5895800E9786E /* environments.plist */; };
 		8348647219F3441300C03AEE /* corp.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646819F3441300C03AEE /* corp.png */; };
 		8348647319F3441300C03AEE /* dev.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646919F3441300C03AEE /* dev.png */; };
 		8348647419F3441300C03AEE /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 8348646A19F3441300C03AEE /* google.png */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83327E5919F5895800E9786E /* environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = environments.plist; path = config/environments.plist; sourceTree = SOURCE_ROOT; };
 		8348646819F3441300C03AEE /* corp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = corp.png; path = images/corp.png; sourceTree = SOURCE_ROOT; };
 		8348646919F3441300C03AEE /* dev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dev.png; path = images/dev.png; sourceTree = SOURCE_ROOT; };
 		8348646A19F3441300C03AEE /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = google.png; path = images/google.png; sourceTree = SOURCE_ROOT; };
@@ -152,6 +154,7 @@
 		8399012319F1446C00589E01 /* nsIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				83327E5919F5895800E9786E /* environments.plist */,
 				8348646719F343E200C03AEE /* images */,
 				8399012F19F1446C00589E01 /* AppDelegate.h */,
 				8399013019F1446C00589E01 /* AppDelegate.m */,
@@ -277,6 +280,7 @@
 				8348647319F3441300C03AEE /* dev.png in Resources */,
 				8399012E19F1446C00589E01 /* Credits.rtf in Resources */,
 				8348647B19F3441300C03AEE /* unknown.png in Resources */,
+				83327E5A19F5895800E9786E /* environments.plist in Resources */,
 				8348647419F3441300C03AEE /* google.png in Resources */,
 				8348647819F3441300C03AEE /* staging.png in Resources */,
 				8348647719F3441300C03AEE /* staging-akamai.png in Resources */,
