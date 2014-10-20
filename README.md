@@ -3,7 +3,7 @@ nsIndicator for Mac | Beta
 
 Show a tray icon to change OLX nameservers
 
-![alt tag](https://raw.githubusercontent.com/juan-sanzone-olx/nsindicator-mac/master/images/screenshot.png)
+![alt tag](https://raw.githubusercontent.com/olx-inc/nsindicator-mac/master/images/screenshot.png)
 
 How to Install ?
 ===============
