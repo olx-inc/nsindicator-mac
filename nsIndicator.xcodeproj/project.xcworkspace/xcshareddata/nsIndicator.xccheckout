@@ -10,29 +10,29 @@
 	<string>nsIndicator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>92D3A7A1-50C2-42E1-AC7E-0F8DECBDF9FC</key>
+		<key>AD4216748338E628FE1BBEADF13015C4B4161E19</key>
 		<string>ssh://github.com/juan-sanzone-olx/nsindicator-mac.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>nsIndicator.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>92D3A7A1-50C2-42E1-AC7E-0F8DECBDF9FC</key>
+		<key>AD4216748338E628FE1BBEADF13015C4B4161E19</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/juan-sanzone-olx/nsindicator-mac.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>92D3A7A1-50C2-42E1-AC7E-0F8DECBDF9FC</string>
+	<string>AD4216748338E628FE1BBEADF13015C4B4161E19</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>92D3A7A1-50C2-42E1-AC7E-0F8DECBDF9FC</string>
+			<string>AD4216748338E628FE1BBEADF13015C4B4161E19</string>
 			<key>IDESourceControlWCCName</key>
 			<string>nsindicator-mac</string>
 		</dict>

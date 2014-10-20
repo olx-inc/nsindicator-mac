@@ -25,7 +25,7 @@
     
     // Customize default status bar item
     [self.statusItem setMenu:self.statusMenu];
-    [self.statusItem setTitle:@"nsIndicator"];
+    // [self.statusItem setTitle:@"nsIndicator"]; // En yosemite rompe
     [self.statusItem setImage:itemImage];
     [self.statusItem setHighlightMode:YES];
     
