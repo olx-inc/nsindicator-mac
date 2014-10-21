@@ -15,5 +15,3 @@ Requirements
 ===============
 - Mac OS X 10.8 or more recent version
 - Superuser rights for your system
-
-![alt tag](http://montanayogaproject.com/m/wp-content/uploads/2010/07/paypal_large1.gif)
