@@ -1,4 +1,4 @@
-OLX nsIndicator for Mac 1.1
+OLX - nsIndicator for Mac 1.1
 ===============
 
 Show a tray icon to change OLX nameservers
@@ -18,5 +18,5 @@ Requirements
 
 Changelog
 ===============
-1.0 - First Version (Beta)
-1.1 - Add IRIS Live DNS Support
+- 1.0 First Version (Beta)
+- 1.1 Add IRIS Live DNS Support
