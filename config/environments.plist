@@ -16,5 +16,7 @@
 	<string>166.78.73.42</string>
 	<key>Local</key>
 	<string>166.78.73.43</string>
+	<key>Iris-Prod</key>
+	<string>23.253.39.80</string>
 </dict>
 </plist>

@@ -29,6 +29,7 @@
 		8399013E19F1446D00589E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8399011D19F1446C00589E01 /* Cocoa.framework */; };
 		8399014619F1446D00589E01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8399014419F1446D00589E01 /* InfoPlist.strings */; };
 		8399014819F1446D00589E01 /* nsIndicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399014719F1446D00589E01 /* nsIndicatorTests.m */; };
+		83C7FFE61A2D4AB9000E6E4B /* iris-prod.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C7FFE51A2D4AB9000E6E4B /* iris-prod.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		8399014319F1446D00589E01 /* nsIndicatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nsIndicatorTests-Info.plist"; sourceTree = "<group>"; };
 		8399014519F1446D00589E01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8399014719F1446D00589E01 /* nsIndicatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nsIndicatorTests.m; sourceTree = "<group>"; };
+		83C7FFE51A2D4AB9000E6E4B /* iris-prod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iris-prod.png"; path = "images/iris-prod.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		8348646719F343E200C03AEE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				83C7FFE51A2D4AB9000E6E4B /* iris-prod.png */,
 				8348646819F3441300C03AEE /* corp.png */,
 				8348646919F3441300C03AEE /* dev.png */,
 				8348646A19F3441300C03AEE /* google.png */,
@@ -280,6 +283,7 @@
 				8348647319F3441300C03AEE /* dev.png in Resources */,
 				8399012E19F1446C00589E01 /* Credits.rtf in Resources */,
 				8348647B19F3441300C03AEE /* unknown.png in Resources */,
+				83C7FFE61A2D4AB9000E6E4B /* iris-prod.png in Resources */,
 				83327E5A19F5895800E9786E /* environments.plist in Resources */,
 				8348647419F3441300C03AEE /* google.png in Resources */,
 				8348647819F3441300C03AEE /* staging.png in Resources */,
