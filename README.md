@@ -1,4 +1,4 @@
-nsIndicator for Mac | Beta
+nsIndicator for Mac | 1.1
 ===============
 
 Show a tray icon to change OLX nameservers
@@ -15,3 +15,8 @@ Requirements
 ===============
 - Mac OS X 10.8 or more recent version
 - Superuser rights for your system
+
+Changelog
+===============
+1.0 - First Version (Beta)
+1.1 - Add IRIS Live DNS Support
