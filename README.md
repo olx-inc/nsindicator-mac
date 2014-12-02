@@ -15,3 +15,5 @@ Requirements
 ===============
 - Mac OS X 10.8 or more recent version
 - Superuser rights for your system
+
+Test
