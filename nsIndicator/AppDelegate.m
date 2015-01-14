@@ -15,6 +15,8 @@
     // Read config file and populate into Dictionary
     NSString *configFile = [[NSBundle mainBundle] pathForResource:@"environments" ofType:@"plist"];
     NSDictionary *environments = [[NSDictionary alloc] initWithContentsOfFile:configFile];
+    self.wifiAdapterItem = [[NSMenuItem alloc] initWithTitle:@"Wi-Fi" action:@selector(doNetAdapters:) keyEquivalent:@""];
+    self.ethernetAdapterItem = [[NSMenuItem alloc] initWithTitle:@"Ethernet" action:@selector(doNetAdapters:) keyEquivalent:@""];
     
     // Load status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -56,17 +58,15 @@
     
     // Networks adapters
     [self.statusMenu addItem:[NSMenuItem separatorItem]];
-    NSMenuItem *wifiAdapterItem = [[NSMenuItem alloc] initWithTitle:@"Wi-Fi" action:@selector(doNetAdapters:) keyEquivalent:@""];
-    [wifiAdapterItem setToolTip:@"Enabled/Disabled DNS change to Wi-Fi Network Adapter"];
-    [wifiAdapterItem setEnabled:YES];
-    [wifiAdapterItem setState:YES];
-    [self.statusMenu addItem: wifiAdapterItem];
+    [self.wifiAdapterItem setToolTip:@"Enabled/Disabled DNS change to Wi-Fi Network Adapter"];
+    [self.wifiAdapterItem setEnabled:YES];
+    [self.wifiAdapterItem setState:YES];
+    [self.statusMenu addItem: self.wifiAdapterItem];
     
-    NSMenuItem *ethernetAdapterItem = [[NSMenuItem alloc] initWithTitle:@"Ethernet" action:@selector(doNetAdapters:) keyEquivalent:@""];
-    [ethernetAdapterItem setToolTip:@"Enabled/Disabled DNS change to Ethernet Adapter"];
-    [ethernetAdapterItem setEnabled:YES];
-    [ethernetAdapterItem setState:YES];
-    [self.statusMenu addItem: ethernetAdapterItem];
+    [self.ethernetAdapterItem setToolTip:@"Enabled/Disabled DNS change to Ethernet Adapter"];
+    [self.ethernetAdapterItem setEnabled:YES];
+    [self.ethernetAdapterItem setState:YES];
+    [self.statusMenu addItem: self.ethernetAdapterItem];
     
     
     // Build Exit item
@@ -80,7 +80,21 @@
 - (IBAction)updateDns:(NSMenuItem *)menuItem
 {
     // Create terminal command to change DNS
-    NSString* terminalCmd = @"networksetup -setdnsservers Wi-Fi ";
+    if ( [_wifiAdapterItem state] == YES) {
+        [self doUpdateDns:menuItem:@"Wi-Fi "];
+    }
+    
+    if ( [_ethernetAdapterItem state] == YES) {
+        [self doUpdateDns:menuItem: @"'Thunderbolt Ethernet' "];
+    }
+    
+    
+    // Update status menu bar
+    [self updateStatusBar:menuItem];
+}
+
+- (IBAction) doUpdateDns:(NSMenuItem *) menuItem :(NSString *) device {
+    NSString* terminalCmd = [@"networksetup -setdnsservers " stringByAppendingString:device];
     terminalCmd = [terminalCmd stringByAppendingString:menuItem.toolTip];
     
     // Exec bash command
@@ -90,9 +104,6 @@
     task.arguments  = aditionalParameters;
     [task launch];
     [task waitUntilExit];
-    
-    // Update status menu bar
-    [self updateStatusBar:menuItem];
 }
 
 - (IBAction)doNetAdapters:(NSMenuItem *)menuItem

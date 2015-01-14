@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic) NSStatusItem *statusItem;
+@property (strong, nonatomic) NSMenuItem *wifiAdapterItem;
+@property (strong, nonatomic) NSMenuItem *ethernetAdapterItem;
 
 @end
