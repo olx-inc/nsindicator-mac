@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AD4216748338E628FE1BBEADF13015C4B4161E19</key>
-		<string>ssh://github.com/juan-sanzone-olx/nsindicator-mac.git</string>
+		<string>github.com:olx-inc/nsindicator-mac.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>nsIndicator.xcodeproj/project.xcworkspace</string>
+	<string>nsIndicator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AD4216748338E628FE1BBEADF13015C4B4161E19</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/juan-sanzone-olx/nsindicator-mac.git</string>
+	<string>github.com:olx-inc/nsindicator-mac.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

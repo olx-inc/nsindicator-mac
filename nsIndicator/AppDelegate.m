@@ -50,10 +50,24 @@
         NSMenuItem *currentItem = [[NSMenuItem alloc] initWithTitle:key action:@selector(updateDns:) keyEquivalent:@""];
         [currentItem setToolTip:value];
         [currentItem setImage:itemImage];
-        [currentItem setEnabled:YES];
-        
         [self.statusMenu addItem: currentItem];
     }];
+    
+    
+    // Networks adapters
+    [self.statusMenu addItem:[NSMenuItem separatorItem]];
+    NSMenuItem *wifiAdapterItem = [[NSMenuItem alloc] initWithTitle:@"Wi-Fi" action:@selector(doNetAdapters:) keyEquivalent:@""];
+    [wifiAdapterItem setToolTip:@"Enabled/Disabled DNS change to Wi-Fi Network Adapter"];
+    [wifiAdapterItem setEnabled:YES];
+    [wifiAdapterItem setState:YES];
+    [self.statusMenu addItem: wifiAdapterItem];
+    
+    NSMenuItem *ethernetAdapterItem = [[NSMenuItem alloc] initWithTitle:@"Ethernet" action:@selector(doNetAdapters:) keyEquivalent:@""];
+    [ethernetAdapterItem setToolTip:@"Enabled/Disabled DNS change to Ethernet Adapter"];
+    [ethernetAdapterItem setEnabled:YES];
+    [ethernetAdapterItem setState:YES];
+    [self.statusMenu addItem: ethernetAdapterItem];
+    
     
     // Build Exit item
     [self.statusMenu addItem:[NSMenuItem separatorItem]];
@@ -79,6 +93,11 @@
     
     // Update status menu bar
     [self updateStatusBar:menuItem];
+}
+
+- (IBAction)doNetAdapters:(NSMenuItem *)menuItem
+{
+    [menuItem setState: ![menuItem state]];
 }
 
 - (void)updateStatusBar:(NSMenuItem *)menuItem
