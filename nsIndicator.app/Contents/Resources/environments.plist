@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Corp</key>
+	<string>10.4.1.21</string>
+	<key>Staging</key>
+	<string>192.168.16.50</string>
+	<key>Staging-Akamai</key>
+	<string>162.242.197.50</string>
+	<key>Testing</key>
+	<string>192.168.8.70</string>
+	<key>Testing-Akamai</key>
+	<string>166.78.73.50</string>
+	<key>Dev</key>
+	<string>166.78.73.42</string>
+	<key>Local</key>
+	<string>166.78.73.43</string>
+	<key>Iris-Prod</key>
+	<string>23.253.39.80</string>
+</dict>
+</plist>
