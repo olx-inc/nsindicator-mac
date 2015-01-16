@@ -20,3 +20,4 @@ Changelog
 ===============
 - 1.0 First Version (Beta)
 - 1.1 Add IRIS Live DNS Support
+- 1.2 Add support to set DNS in differents networks adapters (Wifi, Ethernet)
