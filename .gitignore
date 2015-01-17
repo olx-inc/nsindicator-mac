@@ -6,3 +6,5 @@ nsIndicator.xcodeproj/xcuserdata/dev.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkp
 nsIndicator.xcodeproj/project.xcworkspace/xcuserdata/dev.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.xcuserstate
+
+.DS_*
